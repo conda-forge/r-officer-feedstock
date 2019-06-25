@@ -1,4 +1,4 @@
-{% set version = "0.3.4" %}
+{% set version = '0.3.5' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/officer_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/officer/officer_{{ version }}.tar.gz
-  sha256: 5fc2ed1238a6a6897d3676a9cbfa46ab6502adca365c09b01db8c862591d8bd4
+  sha256: 6fad0cac3561f3c52ce56fe593d329893824dfd1e75db1d5851a900c6557b300
 
 build:
   merge_build_host: True  # [win]
@@ -21,9 +21,10 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{ compiler('cxx') }}      # [not win]
-    - {{native}}toolchain        # [win]
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ compiler('cxx') }}            # [not win]
+    - {{ compiler('m2w64_cxx') }}      # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
     - {{posix}}sed               # [win]
@@ -82,7 +83,7 @@ extra:
 # Package: officer
 # Type: Package
 # Title: Manipulation of Microsoft Word and PowerPoint Documents
-# Version: 0.3.3
+# Version: 0.3.5
 # Authors@R: c( person("David", "Gohel", role = c("aut", "cre"), email = "david.gohel@ardata.fr"), person("Frank", "Hangler", role = "ctb", email = "frank@plotandscatter.com", comment = "function body_replace_all_text"), person("Liz", "Sander", role = "ctb", email = 'lsander@civisanalytics.com', comment = "several documentation fixes"), person("Anton", "Victorson", role = "ctb", email = 'anton@victorson.se',comment = "fixes xml structures"), person("Jon", "Calder", role = "ctb", email = 'jonmcalder@gmail.com', comment = "update vignettes"), person("John", "Harrold", role = "ctb", email = 'john.m.harrold@gmail.com', comment = "fuction annotate_base") )
 # Description: Access and manipulate 'Microsoft Word' and 'Microsoft PowerPoint' documents from R.  The package focuses on tabular and graphical reporting from R; it also provides two functions that let users get document content into data objects. A set of functions  lets add and remove images, tables and paragraphs of text in new or existing documents.  When working with 'PowerPoint' presentations, slides can be added or removed; shapes inside  slides can also be added or removed. When working with 'Word' documents, a cursor can be  used to help insert or delete content at a specific location in the document. The package  does not require any installation of Microsoft products to be able to write Microsoft files.
 # License: GPL-3
@@ -93,11 +94,11 @@ extra:
 # Encoding: UTF-8
 # BugReports: https://github.com/davidgohel/officer/issues
 # RoxygenNote: 6.1.1
-# Suggests: testthat, devEMF,tibble,ggplot2, rmarkdown, knitr
+# Suggests: testthat, devEMF,tibble,ggplot2, rmarkdown, knitr, rsvg
 # VignetteBuilder: knitr
 # NeedsCompilation: yes
-# Packaged: 2019-03-01 15:12:05 UTC; davidgohel
+# Packaged: 2019-06-23 18:10:57 UTC; davidgohel
 # Author: David Gohel [aut, cre], Frank Hangler [ctb] (function body_replace_all_text), Liz Sander [ctb] (several documentation fixes), Anton Victorson [ctb] (fixes xml structures), Jon Calder [ctb] (update vignettes), John Harrold [ctb] (fuction annotate_base)
 # Maintainer: David Gohel <david.gohel@ardata.fr>
 # Repository: CRAN
-# Date/Publication: 2019-03-01 17:00:03 UTC
+# Date/Publication: 2019-06-23 18:50:03 UTC
