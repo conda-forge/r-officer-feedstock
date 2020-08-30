@@ -3,7 +3,7 @@ About r-officer
 
 Home: https://davidgohel.github.io/officer
 
-Package license: GPL-3
+Package license: GPL-3.0-only
 
 Feedstock license: BSD-3-Clause
 
