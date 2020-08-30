@@ -1,4 +1,4 @@
-{% set version = "0.3.12" %}
+{% set version = "0.3.13" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/officer_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/officer/officer_{{ version }}.tar.gz
-  sha256: 5d90d1c16fe0b6b01e34f8197358194af91d62cdb4eaf9a891459ff3978169f2
+  sha256: 798ad53f8f75348a665bb10cbed7d343d14fe910fd38236d493ceb06756c6597
 
 build:
   merge_build_host: true  # [win]
@@ -63,12 +63,13 @@ test:
 
 about:
   home: https://davidgohel.github.io/officer
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Access and manipulate 'Microsoft Word' and 'Microsoft PowerPoint' documents from R.  The package focuses on tabular and graphical reporting from R; it also provides two functions that let users get document content into data objects. A set of functions  lets add and remove images, tables and paragraphs of text
     in new or existing documents.  When working with 'PowerPoint' presentations, slides can be added or removed; shapes inside  slides can also be added or removed. When working with 'Word' documents, a cursor can be  used to help insert or delete content at a specific location in the document. The package  does not require
     any installation of Microsoft products to be able to write Microsoft files.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
