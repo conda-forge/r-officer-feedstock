@@ -1,4 +1,4 @@
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/officer_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/officer/officer_{{ version }}.tar.gz
-  sha256: 9cc0756c3a5b51e8e112759a86cde0b946b6b45d22ced95b1cfe0a55112c08e5
+  sha256: bcb338ef8c808247eec658d03ee9c9110a570619695bfdf116519b90cfb0ebf2
 
 build:
   merge_build_host: true  # [win]
@@ -49,15 +49,11 @@ about:
   dev_url: https://github.com/davidgohel/officer/
   doc_url: https://davidgohel.github.io/officer/reference/index.html
   license: MIT
-  summary: Access and manipulate 'Microsoft Word' and 'Microsoft PowerPoint' documents from R.
-    The package focuses on tabular and graphical reporting from R; it also provides
-    two functions that let users get document content into data objects. A set of functions
-    lets add and remove images, tables and paragraphs of text in new or existing documents.
-    The package does not require any installation of Microsoft products to be able to
-    write Microsoft files.
+  summary: Access and manipulate 'Microsoft Word' and 'Microsoft PowerPoint' documents from R. The package focuses on tabular and graphical reporting from R; it also provides two functions that let users get document content into data objects. A set of functions lets add and remove images, tables and paragraphs of text in
+    new or existing documents. The package does not require any installation of Microsoft products to be able to write Microsoft files.
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
