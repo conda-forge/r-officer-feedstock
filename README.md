@@ -1,11 +1,11 @@
-About r-officer
-===============
+About r-officer-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-officer-feedstock/blob/main/LICENSE.txt)
 
 Home: https://davidgohel.github.io/officer
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-officer-feedstock/blob/main/LICENSE.txt)
 
 Summary: Access and manipulate 'Microsoft Word' and 'Microsoft PowerPoint' documents from R. The package focuses on tabular and graphical reporting from R; it also provides two functions that let users get document content into data objects. A set of functions lets add and remove images, tables and paragraphs of text in new or existing documents. The package does not require any installation of Microsoft products to be able to write Microsoft files.
 
