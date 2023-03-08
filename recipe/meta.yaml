@@ -26,16 +26,18 @@ requirements:
     - {{ posix }}zip             # [win]
   host:
     - r-base
-    - r-r6
     - r-openssl
-    - r-uuid >=0.1_4
+    - r-r6
+    - r-ragg
+    - r-uuid
     - r-xml2 >=1.1.0
     - r-zip >=2.1.0
   run:
     - r-base
-    - r-r6
     - r-openssl
-    - r-uuid >=0.1_4
+    - r-r6
+    - r-ragg
+    - r-uuid
     - r-xml2 >=1.1.0
     - r-zip >=2.1.0
 
