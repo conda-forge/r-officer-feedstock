@@ -1,4 +1,4 @@
-{% set version = "0.6.4" %}
+{% set version = "0.6.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/officer_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/officer/officer_{{ version }}.tar.gz
-  sha256: 654a5ff967e1e6a38be051e692f9a5f621e83b0b30990e7b3fd7019aa65813d6
+  sha256: ebb270100cf943897f5f2fc900effbab886cce18c4e2b4c218a3f3dcee52f7d3
 
 build:
   merge_build_host: true  # [win]
