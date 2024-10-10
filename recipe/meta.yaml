@@ -1,4 +1,4 @@
-{% set version = "0.6.6" %}
+{% set version = "0.6.7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/officer_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/officer/officer_{{ version }}.tar.gz
-  sha256: f1fc3f7a9299da1fd09864da4ae6b8c47c6491f0119da86863b1c9470caeb412
+  sha256: f02fafff3adad784fb7f8d3f1ef7555a78e754179f5e531c4171479f71d92ba9
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
